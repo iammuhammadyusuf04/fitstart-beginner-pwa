@@ -8,7 +8,7 @@ FitStart — zalga endi kelayotganlar uchun yengil, mobilga mos PWA. U 4 haftali
 - CSS, responsive va safe-area insets bilan
 - IndexedDB qurilma ichidagi baza (LocalStorage faqat IndexedDB mavjud bo‘lmagan fallback)
 - Web App Manifest va Service Worker
-- GitHub Pages + GitHub Actions
+- GitHub Pages (main branch’dan avtomatik deploy)
 
 ## Mahalliy ishga tushirish
 
@@ -30,11 +30,11 @@ Ilova statik bo‘lgani sabab alohida compile/build buyrug‘i talab qilinmaydi.
 
 ## GitHub Pages deploy
 
-1. Barcha fayllarni GitHub repository’ning `main` branch’iga push qiling.
-2. Repository → **Settings → Pages → Build and deployment → Source** bo‘limida **GitHub Actions** ni tanlang.
-3. Har bir `main` push avtomatik deploy bo‘ladi. Actions → Deploy workflow’da public URL ko‘rinadi: `https://<username>.github.io/<repository>/`.
+1. Repository → **Settings → Pages → Build and deployment → Source** bo‘limida **Deploy from a branch** ni tanlang.
+2. Branch sifatida `main`, papka sifatida `/ (root)` ni tanlab saqlang.
+3. Har bir `main` push’dan keyin GitHub Pages saytni avtomatik yangilaydi: https://iammuhammadyusuf04.github.io/fitstart-beginner-pwa/
 
-Workflow root’dan statik fayllarni deploy qiladi. Ilova repository subpath’da ishlashi uchun asset va route manzillari relative yozilgan.
+Ilova root’dagi statik fayllardan iborat, build qadami talab qilinmaydi. Asset manzillari repository subpath’da ham ishlashi uchun relative yozilgan.
 
 ## iPhone’da o‘rnatish
 
